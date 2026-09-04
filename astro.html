@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>星之焰 StarBlaze</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="share/style.css">
+        <link rel="stylesheet" href="astro/style.css">
+        <script src="share/site.js" defer></script>
+    </head>
+    <body>
+        <!-- Background filter -->
+        <div class="overlay">
+            <nav>
+                <span class="logo">STARBLAZE</span>
+                <div class="spacer"></div> 
+                <a href="index.html">简介</a>
+                <a href="photograph.html">摄影</a>
+                <a href="astro.html" class="active">天文</a>
+                <a href="programming.html">编程</a>
+                <div class="spacer"></div> 
+                <label class="switch">
+                    <span class="switch-text">中</span>
+                    <input type="checkbox" id="languageSwitch">
+                    <span class="slider round"></span>
+                    <span class="switch-text">EN</span>
+                </label>            
+            </nav>
+            <div class="horizontal-line"></div>
+
+            <div class="typeBox">
+                <ul class="type">
+                    <li><a href="#!" class="typeButton" id="typeButton1" onclick="scrollToElement('solarMoon')">日月</a></li>
+                    <li><a href="#!" class="typeButton" id="typeButton2" onclick="scrollToElement('planet')">行星</a></li>
+                    <li><a href="#!" class="typeButton" id="typeButton3" onclick="scrollToElement('deepsky')">深空</a></li>
+                    <li><a href="#!" class="typeButton" id="typeButton4" onclick="scrollToElement('starField')">星野</a></li>
+                </ul>
+                <div class="horizontal-line"></div>
+            </div>
+
+            
+            <!-- solar+moon -->
+            <div id="solarMoon">
+                <div class="sticky-header">
+                    <h2 class="group-title">日月</h2>
+                    <div class="vertical-line"></div>
+                    <h2 class="group-title-right">Solar & Moon</h2>
+                </div>
+                <div class="boxGroup">
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="photo-data-left">
+                                <h1>太阳</h1>
+                                <h2>Solar</h2>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-07-09</p>
+                                <p>时间: 10:14 UTC+8</p>
+                                <p>深圳: 22.7530, 113.9067</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20240709_solar/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240709_solar/photo2.jpg" alt="Photo 2" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Seestar S50</p>
+                        <p class="photo-thoughts">10min RAW; 10% best px</p>
+                        <div class="photo-details">
+                            <p class="photo-description">太阳黑子活跃期</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="photo-data-left">
+                                <h1>月球</h1>
+                                <h2>Moon</h2>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-10-11</p>
+                                <p>时间: 21:41 UTC+8</p>
+                                <p>福州: 26°6′N, 119°15′E</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20241011_Moon/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">SeestarS50</p>
+                        <div class="photo-details">
+                            <p class="photo-description">s50直出的清晰的月亮</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="photo-data-left">
+                                <h1>月球</h1>
+                                <h2>Moon</h2>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-07-05</p>
+                                <p>时间: 4:30 UTC+8</p>
+                                <p>香港: 22.2064, 114.0369</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20240705_moon/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240705_moon/photo2.jpg" alt="Photo 2" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Sony A7M4; Sony 200-600G</p>
+                        <p class="photo-thoughts">Mount: Sky-Watcher Adventurer 2i</p>
+                        <div class="photo-details">
+                            <p class="photo-description">清晰的月亮</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- planet -->
+            <div id="planet">
+                <div class="sticky-header">
+                    <h2 class="group-title">行星</h2>
+                    <div class="vertical-line"></div>
+                    <h2 class="group-title-right">Planet</h2>
+                </div>
+                <div class="boxGroup">
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="photo-data-left">
+                                <h1>木星</h1>
+                                <h2>Jupiter 42.9“</h2>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-10-10</p>
+                                <p>时间: 3:19 UTC+8</p>
+                                <p>福州: 26°6′N, 119°15′E</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20241012_jupiter/photo1.png" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20241012_jupiter/photo2.png" alt="Photo 2" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Celestron C6 + ZWO ASI715MC</p>
+                        <p class="photo-thoughts">Mount: Sky-Watcher EQ-3P</p>
+                        <p class="photo-thoughts">90s exposure, best 25% of pixels used</p>
+                        <div class="photo-details">
+                            <p class="photo-description">第一次拍摄木星，经验不足！</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="photo-data-left">
+                                <h1>土星</h1>
+                                <h2>Saturn 18.8“</h2>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-10-14</p>
+                                <p>时间: 2:19 UTC+8</p>
+                                <p>福州: 26°6′N, 119°15′E</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20241014_saturn/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20241014_saturn/photo2.jpg" alt="Photo 2" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Celestron C6 + ZWO ASI715MC</p>
+                        <p class="photo-thoughts">Mount: Sky-Watcher EQ-3P</p>
+                        <p class="photo-thoughts">90s exposure, best 20% of pixels used</p>
+                        <div class="photo-details">
+                            <p class="photo-description">第一次拍摄土星, 多多指教！</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- deepsky -->
+            <div id="deepsky">
+                <div class="sticky-header">
+                    <h2 class="group-title">深空天体</h2>
+                    <div class="vertical-line"></div>
+                    <h2 class="group-title-right">Deep Sky Object</h2>
+                </div>
+                <div class="boxGroup">
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="dsophoto-data-left">
+                                <h1>仙女座星系</h1>
+                                <h2>Andromeda Galaxy</h2>
+                                <p>M31 | NGC 224 & M32 & M110</p>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-07-04</p>
+                                <p>时间: 3:00 UTC+8</p>
+                                <p>香港: 22.2064, 114.0369</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20240704_M31/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240704_M31/photo2.jpg" alt="Photo 2" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240704_M31/photo3.jpg" alt="Photo 3" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240704_M31/photo4.jpg" alt="Photo 4" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Sony A7M4; Sony 200-600G</p>
+                        <p class="photo-thoughts">Mount: Sky-Watcher Adventurer 2i</p>
+                        <div class="photo-details">
+                            <p class="photo-description">首次拍摄星云，天打雷劈的好天气。</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="dsophoto-data-left">
+                                <h1>礁湖星云</h1>
+                                <h2>Lagoon Nebula</h2>
+                                <p>M8 | NGC 6523</p>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-07-12</p>
+                                <p>时间: 0:55 UTC+8</p>
+                                <p>深圳: 22.7530, 113.9067</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20240712_M8/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Seestar S50</p>
+                        <p class="photo-thoughts">20s x 60 frames</p>
+                        <div class="photo-details">
+                            <p class="photo-description">没想到区区一个 SeestarS50 在深圳5级光害下能拍到 M8</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="dsophoto-data-left">
+                                <h1>猎户座大星云</h1>
+                                <h2>Orion Nebula</h2>
+                                <p>M41 | NGC 1976</p>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-10-12</p>
+                                <p>时间: 0:40 UTC+8</p>
+                                <p>福州: 26°6′N, 119°15′E</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20241012_M42/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Seestar S50</p>
+                        <p class="photo-thoughts">2 min</p>
+                        <div class="photo-details">
+                            <p class="photo-description">5级光害直出，仅裁切。</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="dsophoto-data-left">
+                                <h1>仙女座大星系</h1>
+                                <h2>Andromeda Galaxy</h2>
+                                <p>M31 | NGC 224</p>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-10-12</p>
+                                <p>时间: 1:19 UTC+8</p>
+                                <p>福州: 26°6′N, 119°15′E</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20241012_M31/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Seestar S50</p>
+                        <p class="photo-thoughts">18 min</p>
+                        <div class="photo-details">
+                            <p class="photo-description">5级光害直出</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="dsophoto-data-left">
+                                <h1>哑铃星云</h1>
+                                <h2>Dumbbell Nebula</h2>
+                                <p>M27 | NGC 6853</p>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-07-04</p>
+                                <p>时间: 2:30 UTC+8</p>
+                                <p>香港: 22.2064, 114.0369</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20240704_M27/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Sony A7M4; Sony 200-600G</p>
+                        <p class="photo-thoughts">Mount: Sky-Watcher Adventurer 2i</p>
+                        <div class="photo-details">
+                            <p class="photo-description">首次拍摄星云，天打雷劈的好天气。</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- starField -->
+            <div id="starField">
+                <div class="sticky-header">
+                    <h2 class="group-title">星野</h2>
+                    <div class="vertical-line"></div>
+                    <h2 class="group-title-right">Star Field</h2>
+                </div>
+                <div class="boxGroup">
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="photo-data-left">
+                                <h1>银河</h1>
+                                <h2>Galaxy</h2>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2024-07-04</p>
+                                <p>时间: 1:30 UTC+8</p>
+                                <p>香港: 22.2064, 114.0369</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20240704_galaxy/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240704_galaxy/photo2.jpg" alt="Photo 2" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240704_galaxy/photo3.jpg" alt="Photo 3" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20240704_galaxy/photo4.jpg" alt="Photo 4" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Sony A7M4; Sony 24-70GM 30mm</p>
+                        <p class="photo-thoughts">Mount: Sky-Watcher Adventurer 2i</p>
+                        <div class="photo-details">
+                            <p class="photo-description">不靠后期堆栈的银河</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="photo-box">
+                        <div class="photo-header">
+                            <div class="photo-data-left">
+                                <h1>银河</h1>
+                                <h2>Galaxy</h2>
+                            </div>
+                            <div class="photo-data-right">
+                                <p>日期: 2023-07-14</p>
+                                <p>时间: 23:00 UTC+8</p>
+                                <p>香港: 22.2064, 114.0369</p>
+                            </div>
+                        </div>
+                        <div class="photo-carousel">
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <img data-src="astro/album/starField/20230714_galaxy/photo1.jpg" alt="Photo 1" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20230714_galaxy/photo2.jpg" alt="Photo 2" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20230714_galaxy/photo3.jpg" alt="Photo 3" class="carousel-image" loading="lazy">
+                            <img data-src="astro/album/starField/20230714_galaxy/photo4.jpg" alt="Photo 4" class="carousel-image" loading="lazy">
+                            <button class="carousel-button next-button">></button>
+                        </div>
+                        <p class="photo-thoughts">Canon EOS RP; Canon RF 24-105: 35mm</p>
+                        <p class="photo-thoughts">Mount: Sky-Watcher Adventurer 2i</p>
+                        <div class="photo-details">
+                            <p class="photo-description">第一次拍摄到银河</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            
+
+            <footer>
+                <p class="watermarking">Photo & Web © Jason_xdd</p>
+                <p class="beian">
+                    <a href="https://beian.miit.gov.cn" target="_blank" class="beian">粤ICP备2024311314号</a>
+                </p>
+            </footer>
+
+        </div>
+        <script src="share/carousel.js"></script>
+        <script src="astro/lang.js"></script>
+        <!-- scroll -->
+        <script>
+            function scrollToElement(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: elementPosition - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>

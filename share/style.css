@@ -1,0 +1,221 @@
+body {
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #343434;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+html {
+    min-height: 100%;
+    background-color: #343434;
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 0;
+    /* pointer-events: none; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    text-align: center;
+    /* position: relative; */
+    /* position: sticky; */
+    top:0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.horizontal-line {
+    /* position: sticky; */
+    top: 93px;
+    border-top: 1px solid #ababab;
+    z-index: 3;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #c6c6c6;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+nav a {
+    color: #c6c6c6;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #b3b3b3a0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    text-decoration: underline;
+    text-decoration-color: #b3b3b3;
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .spacer {
+        flex-grow: 0;
+    }
+
+    .logo {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+/* toggle switch */
+.switch {
+    opacity: 0.7;
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* slider */
+/* slider background */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* switch-on bgc */
+input:checked + .slider {
+    background-color: #a3f9ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(35px); /* 调整为按钮滑动到右侧 */
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* text format */
+.switch-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+}
+
+.switch-text:first-of-type {
+    z-index: 1;
+    left: 8.5px; /* 左侧的 "中" 文字 */
+}
+
+.switch-text:last-of-type {
+    right: 7px; /* 右侧的 "EN" 文字 */
+}
+/* end */
+
+/* Amimation */
+nav a, .horizontal-line {
+    transition: opacity 0.5s ease;
+}
+
+nav a.fade-out, .horizontal-line.fade-out {
+    opacity: 0;
+}
+
+nav a.fade-i, .horizontal-line.fade-out {
+    opacity: 1;
+}
+/* end */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.watermarking {
+    display: inline-block;
+    text-align: center;
+}
+
+.beian {
+    display: inline-block;
+}
+
+.beian a {
+    color: #666;
+    text-decoration: none;
+}
+
+.beian a:hover {
+    text-decoration: underline;
+    color: #666;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

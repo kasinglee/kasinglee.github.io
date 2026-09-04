@@ -1,0 +1,17 @@
+# Generated archives and media belonging to excluded demo projects.
+*.ttf
+*.woff
+*.woff2
+*.mp3
+*.wav
+*.zip
+*.pdf
+
+# Local and system files
+.DS_Store
+Thumbs.db
+__MACOSX/
+.well-known/
+others/
+temp/
+yanhuaa/
